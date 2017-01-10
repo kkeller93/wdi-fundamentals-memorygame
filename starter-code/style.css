@@ -1,3 +1,68 @@
-/* This is a multi-line
-comment. Add your CSS code
-from Unit 1 - 5 below  */
+.board {
+	/* you are able to use percents */
+	height: 50%;
+	width: 50%;
+	display: inline-block;
+}
+
+.card {
+	height: 200px;
+	width: 150px;
+	border: 1px solid black;
+	border-radius: 10px; /*creates the rounded border*/
+	background: #FFFF00;
+	float: left;
+	margin: 8%;
+}
+
+.name{
+	color: #FF0000;
+}
+
+#h1 {
+	color: rgb(2,132,130);
+	width: 50%;
+}
+
+#h2 {
+	color: #ffd700;
+	width: 50%;
+}
+
+#p {
+	width: 50%;
+}
+
+h1,h2,p,footer {
+	text-align: center;
+}
+
+footer {
+	background-color: #808080;
+}
+
+nav { /*giving grey background behind the buttons*/
+	background-color: #808080;
+}
+
+nav a { /*controlling the nav buttons*/
+	background-color: #ffbf00;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 35px;
+	float: left;
+	display: block;
+}
+
+a:hover { /*allowing the buttons to turn red when hovered on*/
+	background-color: #ee5f3c;
+}
+
+.clearfix:after {
+	visibility: :hidden;
+	display: block;
+	content: " ";
+	clear: both;
+	height: 0;
+	font-size: 0;
+}

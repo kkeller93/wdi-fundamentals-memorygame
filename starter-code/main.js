@@ -10,13 +10,17 @@ var cards = ['queen','queen','king','king'];
 var cardsInPlay = [];
 
 var isMatch = function(cardsInPlay) {
-	if (cards[0] === cards[1] || cards[2] === cards[3]) {
-		//alert("You found a match!");
-		console.log("it works")
+	console.log(cardsInPlay);
+	if (cardsInPlay[0] === 'queen' && cardsInPlay[1] === 'queen') {
+		alert("You found a match!");
+		//console.log("it works")
+	}
+	else if (cardsInPlay[0] === 'king' && cardsInPlay[1] === 'king') {
+		alert("You found a match!");
 	}
 	else {
-		//alert("Sorry, try again");
-		return false
+		alert("Sorry, try again");
+		//return false
 	}
 }
 
@@ -24,9 +28,9 @@ var isTwoCards = function() {
 	cardsInPlay.push(this.getAttribute('cardsInPlay'));
 	if (cardsInPlay.length === 2) {
 		isMatch(cardsInPlay);
-		console.log(cardsInPlay);
+		//console.log(cardsInPlay);
 		cardsInPlay = [];
-	}; //double check to see if this function is running correct
+	}; 
 }
 
 /*var createBoard = function() {
@@ -39,6 +43,9 @@ var isTwoCards = function() {
 		//console.log(cardsInPlay);
 	};
 }
+
+<img src="king.png" alt="King" title="King">
+<img src="queen.png" alt="Queen" title="Queen">
 
 createBoard();*/
 
@@ -57,6 +64,8 @@ var createCards = function() {
 		newDiv.className = 'card';
 		newDiv.setAttribute('cardsInPlay', cards[i]);
 		newDiv.addEventListener('click',isTwoCards);
+		//newDivinnerHTML = '<img src="king.png" alt="King" title="King">';
+		//newDiv.innerHTML = '<img src="queen.png" alt="Queen" title="Queen">';
 		game.appendChild(newDiv);
 	};
 }

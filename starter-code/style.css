@@ -58,6 +58,11 @@ a:hover { /*allowing the buttons to turn red when hovered on*/
 	background-color: #ee5f3c;
 }
 
+img {
+	height: 200px;
+	width: 150px;
+}
+
 .clearfix:after {
 	visibility: :hidden;
 	display: block;

@@ -7,25 +7,33 @@ var cardThree = "king";
 var	cardFour = "king";*/
 
 var cards = ['queen','queen','king','king'];
+
 var cardsInPlay = [];
 
 var isMatch = function(cardsInPlay) {
-	console.log(cardsInPlay);
 	if (cardsInPlay[0] === 'queen' && cardsInPlay[1] === 'queen') {
 		alert("You found a match!");
-		//console.log("it works")
 	}
 	else if (cardsInPlay[0] === 'king' && cardsInPlay[1] === 'king') {
 		alert("You found a match!");
 	}
 	else {
 		alert("Sorry, try again");
-		//return false
 	}
 }
 
+// function clicked(){
+// 	console.log('test');
+// 	var newDiv = document.createElement('div');
+// 	newDiv.innerHTML = '<img src="queen.png" alt="Queen" title="Queen">';
+// }
+
+
+
 var isTwoCards = function() {
 	cardsInPlay.push(this.getAttribute('cardsInPlay'));
+	console.log(cardsInPlay);
+	//clicked();
 	if (cardsInPlay.length === 2) {
 		isMatch(cardsInPlay);
 		//console.log(cardsInPlay);
@@ -49,13 +57,6 @@ var isTwoCards = function() {
 
 createBoard();*/
 
-/*if (cards[0]=== cards[1] || cards[2] === cards[3]) {
-	alert("You found a match!");
-}
-else {
-	alert("Sorry, try again");
-}*/
-
 var createCards = function() {
 	var game = document.getElementById('game-board');
 	for (var i=0; i<4; i++) {
@@ -64,7 +65,15 @@ var createCards = function() {
 		newDiv.className = 'card';
 		newDiv.setAttribute('cardsInPlay', cards[i]);
 		newDiv.addEventListener('click',isTwoCards);
-		//newDivinnerHTML = '<img src="king.png" alt="King" title="King">';
+		/*if (cards[0] || cards[1]) {
+			console.log('queen');
+			newDiv.innerHTML = '<img src="queen.png" alt="Queen" title="Queen">';
+		}
+		else if (cards[2] || cards[3]) {
+			console.log('king');
+			newDiv.innerHTML = '<img src="king.png" alt="King" title="King">';
+		}*/
+		//cards[2].innerHTML = '<img src="king.png" alt="King" title="King">';
 		//newDiv.innerHTML = '<img src="queen.png" alt="Queen" title="Queen">';
 		game.appendChild(newDiv);
 	};
